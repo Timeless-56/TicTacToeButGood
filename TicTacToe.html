@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Tic Tac Toe</title>
+	</head>
+	<body><center>
+		<h1>Tic Tac Toe</h1>
+		<h2><span id="row1"></span><br>
+			<span id="row2"></span><br>
+			<span id="row3"></span><br></h2>
+		<form id="computer">
+			<h3>Play against computer?</h3>
+			<input type="button" onclick="setComputer(1)" value="Computer is X (impossible)">
+			<input type="button" onclick="hello('comp')" value="Hide">
+			<input type="button" onclick="setComputer(2)" value="Computer is O (possible)"><br><br><br>
+		</form>
+		<span id="inputid">
+			<input type="button" onclick="PlayR()" value="Play Random move"><br>
+			<input type="button" onclick="location.reload()" value="Reset">
+		</span>
+	</center><script src="Cpu.js"></script>
+</body>
+</html>
