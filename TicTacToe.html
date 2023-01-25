@@ -3,12 +3,26 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Tic Tac Toe</title>
+		<style>
+			canvas{
+				border: 5px solid red;
+			}
+			body{
+				margin:0;
+				background-color: black;
+				color: white;
+			}
+			#slider{
+				width: 75%;
+				height: 15px;
+				border-radius: 5px;  
+				background: #d3d3d3;
+			}
+		</style>
 	</head>
 	<body><center>
 		<h1>Tic Tac Toe</h1>
-		<h2><span id="row1"></span><br>
-			<span id="row2"></span><br>
-			<span id="row3"></span><br></h2>
+		<canvas></canvas>
 		<form id="computer">
 			<h3>Play against computer?</h3>
 			<input type="button" onclick="setComputer(1)" value="Computer is X (impossible)">
@@ -17,8 +31,22 @@
 		</form>
 		<span id="inputid">
 			<input type="button" onclick="PlayR()" value="Play Random move"><br>
+			<input type="button" onclick="switchB()" value="Fill Switch">
 			<input type="button" onclick="location.reload()" value="Reset">
+			<div id="switchInfo">"Fill Switch" is for saved games and it shows you where to press for each move listed</div>
 		</span>
+		<br>
+		Board Size (<span id="slidervalue">100</span>): <input type="range" min="10" max=300 value="100" id="slider"><br>
+		<h3>Save: <span id="save"></span></h3>
 	</center><script src="Cpu.js"></script>
 </body>
 </html>
+<!--PLANS:
+html:
+- css
+
+js:
+
+both:
+- more input
+-->
